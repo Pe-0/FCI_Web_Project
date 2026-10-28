@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Browse MediLine medical equipment by specialty, device name, or brand." />
+    <title>MediLine | Equipment catalog</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body data-page="categories">
+    <div id="site-header"></div>
+    <main class="page-main">
+      <section class="page-intro">
+        <p class="eyebrow">Professional medical equipment</p>
+        <h1>Find equipment that fits your clinical workflow</h1>
+        <p>Filter by specialty, search by device or brand, and open any product to see use cases, specifications, support, and current availability.</p>
+      </section>
+      <section class="catalog-intelligence" aria-label="Clinical-fit guidance">
+        <div><span class="catalog-intelligence-label">Clinical-fit guidance</span><strong>Start with the room, workflow, and patient volume you need to support.</strong></div>
+        <p>Every device page explains where it is most useful and what to confirm before delivery.</p>
+        <a href="mailto:sales@mediline.local">Ask a specialist</a>
+      </section>
+      <section class="catalog-section">
+        <div class="catalog-toolbar">
+          <div id="category-filters" class="filter-list" aria-label="Filter by category"></div>
+          <label class="select-control">Sort by
+            <select id="product-sort">
+              <option value="featured">Featured first</option>
+              <option value="rating">Highest rated</option>
+              <option value="price-low">Price: low to high</option>
+              <option value="price-high">Price: high to low</option>
+            </select>
+          </label>
+        </div>
+        <div class="catalog-result-line"><strong id="catalog-count">Loading equipment...</strong><span id="catalog-query"></span></div>
+        <div id="catalog-products" class="product-grid" aria-live="polite"></div>
+      </section>
+    </main>
+    <div id="site-footer"></div>
+  </body>
+</html>

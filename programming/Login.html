@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Sign in or create a MediLine clinic account." />
+    <title>MediLine | Sign in</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body data-page="login">
+    <div id="site-header"></div>
+    <main class="auth-main">
+      <section class="auth-aside">
+        <a class="brand brand-large" href="Home.html"><span class="brand-mark">+</span><span>Medi<span>Line</span></span></a>
+        <p class="eyebrow">The clinical equipment platform</p>
+        <h1>Make better equipment decisions with one organized account.</h1>
+        <p>Save your shortlist, submit purchase requests, and keep a clear record of the devices selected for your clinic.</p>
+        <div class="auth-benefits"><span><b>01</b> Keep your shortlist in one place</span><span><b>02</b> Submit equipment requests securely</span><span><b>03</b> Review account and order history</span></div>
+      </section>
+      <section class="auth-card" aria-live="polite">
+        <div class="auth-heading">
+          <p class="eyebrow" id="auth-eyebrow">Welcome back</p>
+          <h2 id="auth-title">Sign in to your account</h2>
+          <p id="auth-description">Enter your details to continue to MediLine.</p>
+        </div>
+        <form id="login-form" class="auth-form">
+          <label>Email address<input name="email" type="email" autocomplete="email" placeholder="name@clinic.com" required /></label>
+          <label>Password<input name="password" type="password" autocomplete="current-password" placeholder="Enter your password" minlength="8" required /></label>
+          <button class="button button-primary button-full" type="submit">Sign in</button>
+        </form>
+        <form id="register-form" class="auth-form is-hidden">
+          <label>Full name<input name="name" type="text" autocomplete="name" placeholder="Dr. Alex Morgan" minlength="2" required /></label>
+          <label>Email address<input name="email" type="email" autocomplete="email" placeholder="name@clinic.com" required /></label>
+          <label>Password<input name="password" type="password" autocomplete="new-password" placeholder="At least 8 characters" minlength="8" required /></label>
+          <button class="button button-primary button-full" type="submit">Create account</button>
+        </form>
+        <p class="form-message" id="auth-message" role="status"></p>
+        <p class="auth-switch" id="auth-switch-copy">New to MediLine? <button type="button" data-auth-switch="register">Create an account</button></p>
+      </section>
+    </main>
+    <div id="site-footer"></div>
+  </body>
+</html>
